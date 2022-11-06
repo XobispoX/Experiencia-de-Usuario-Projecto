@@ -1,8 +1,43 @@
 const express = require("express");
-const { addressController } = require("../Controllers/address.controller");
+const db = require("../Services/products");
+const {
+  addUser,
+  editPassword,
+  editEmail,
+  editName,
+  login,
+} = require("../Controllers/usercontrol");
 
-const addressRouter = express.Router();
+const addUserRouter = express.Router();
+const editPasswordRouter = express.Router();
+const editEmailRouter = express.Router();
+const editNameRouter = express.Router();
+const loginRouter = express.Router();
 
-addressRouter.get("/", addressController);
+addUserRouter.post("/", (req, res) => {
+  addUser(req, res, db);
+});
 
-module.exports = addressRouter;
+editPasswordRouter.put("/", (req, res) => {
+  editPassword(req, res, db);
+});
+
+editEmailRouter.put("/", (req, res) => {
+  editEmail(req, res, db); 
+});
+
+editNameRouter.put("/", (req, res) => {
+  editName(req, res, db); 
+});
+
+loginRouter.post("/", (req, res) => {
+  login(req, res, db); 
+});
+
+module.exports = {
+  addUserRouter: addUserRouter,
+  editPasswordRouter: editPasswordRouter,
+  editEmailRouter: editEmailRouter,
+  editNameRouter: editNameRouter,
+  loginRouter: loginRouter,
+};
