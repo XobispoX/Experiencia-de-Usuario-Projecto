@@ -1,0 +1,8 @@
+READ ME
+
+
+From the VS Code terminal make sure to install 
+
+Npm init
+Npm express
+Npm dotenv
