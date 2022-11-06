@@ -10,7 +10,7 @@ const knex = require('knex')({
 });
 
 
-/*
+
 async function getProducts(li,off){
 
     const Products= JSON.parse(JSON.stringify(
@@ -37,6 +37,6 @@ return ProductByName;
 module.exports={
     getProducts,
     searchProduct
-};*/
+};
 
 module.exports = db;
