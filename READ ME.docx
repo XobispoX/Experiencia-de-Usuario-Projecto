@@ -1,8 +1,17 @@
 READ ME
 
+using node version 19.0.0
 
-From the VS Code terminal make sure to install 
+before install configure .env file, use .env.dev as a guide cnfigure your db schema, import dump.sql on your db server
 
-Npm init
-Npm express
-Npm dotenv
+to run localy on the terminal
+
+    npm install
+    Npm init
+    Npm express
+    Npm dotenv
+
+to run dev
+
+    npm run dev
+
