@@ -7,7 +7,6 @@ function successResponse(data, statusCode = 200) {
 
     };
 }
-
 function badRequestResponse(data, statusCode = 400) {
     if (statusCode == 404) {
         return {
@@ -25,7 +24,6 @@ function badRequestResponse(data, statusCode = 400) {
         };
 
 }
-
 module.exports = {
     successResponse,
     badRequestResponse

@@ -6,5 +6,4 @@ const userController=require("../Controllers/usercontrol");
 
 routerU.put('/',userController.PutUser);
 
-
 module.exports=routerU;
